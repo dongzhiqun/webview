@@ -1,0 +1,215 @@
+@import './variables.scss';
+
+.el-button--primary {
+  color: #FFF;
+  background-color: $mainBtnColor;
+  border-color: $mainBtnColor;
+}
+.el-button--medium:focus,.el-button--medium:active {
+  color: $mainBtnColor;
+  border-color: $mainBtnColor;
+}
+.el-button--text {
+  color: $mainBtnColor;
+  background: 0 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.el-button--primary:hover,.el-button--primary:active,.el-button--primary:focus {
+  color: #FFF;
+  background-color: $mainBtnOnColor;
+  border-color: $mainBtnOnColor;
+}
+.el-button--default:hover{
+  color: $mainBtnColor;
+  border-color:$mainBtnColor;
+  background-color: #fff;
+}
+.el-button--text:hover,.el-button--text:active,.el-button--text:focus{
+  color: $mainBtnOnColor;
+}
+.el-menu {
+  border-right: 0;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  background-color: $sideBg;
+  text-align: left;
+}
+.el-menu-item,.el-submenu__title{
+  color:#565656;
+}
+
+.el-menu-item.is-active {
+  color: $mainBtnColor;
+}
+
+.el-submenu__title:hover{
+  background-color: $mainBtnColor;
+  color: #fff;
+  &>i{
+    color: #fff;
+  }
+}
+.el-menu-item:focus, .el-menu-item:hover {
+  outline: 0;
+  background-color: $mainBtnColor;
+  color: #fff;
+  &>i{
+    color: #fff;
+  }
+}
+.el-menu--inline .el-menu-item.is-active:focus, .el-menu--inline .el-menu-item.is-active:hover {
+  &::before{
+    background-color: #fff;
+  }
+}
+.el-submenu .el-menu-item.is-active {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 45px 0 25px;
+  min-width: 200px;
+  color:#fff;
+  background-color: $mainBtnColor;
+}
+
+// 表格相关样式修改
+.el-table th {
+  background-color: #f5f5f5;
+}
+.el-table tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+.el-table td, .el-table th.is-leaf {
+  border-bottom: 1px solid #f5f5f5;
+}
+.has-gutter{
+  font-weight: 600;
+}
+.el-table th>.cell {
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: calc(100% - 1px);
+  color:#262626;
+  // border-right: 1px solid #979797;
+  text-align: center;
+}
+.el-table .cell{
+  text-align: center;
+}
+.el-table--enable-row-transition .el-table__body td {
+  text-align: center;
+}
+.el-table--enable-row-transition .el-table__body td.is-left {
+  text-align: left;
+}
+.el-table tr>th:nth-last-child(2)>.cell{
+  border-right: 1px solid #00000000;
+}
+
+.el-pagination {
+  white-space: nowrap;
+  padding: 2px 5px;
+  color: $mainBtnColor;
+  font-weight: 700;
+  text-align: right;
+  margin: 20px 0;
+}
+// 分页按钮修改的数字颜色
+.el-pagination.is-background .el-pager li:not(.disabled):hover{
+  color: $mainBtnColor;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color:  $mainBtnColor;
+  color: #FFF;
+}
+
+.el-switch.is-checked .el-switch__core {
+  border-color: $mainBtnColor;
+  background-color: $mainBtnColor;
+}
+.el-loading-spinner .path {
+  stroke: $mainBtnColor;
+}
+.el-loading-spinner .el-loading-text {
+  color: $mainBtnColor;
+  margin: 3px 0;
+  font-size: 14px;
+}
+.el-select .el-input.is-focus .el-input__inner,.el-select .el-input__inner:focus {
+  border-color: $mainBtnColor;
+}
+.el-input .el-input__inner:focus {
+  border-color: $mainBtnColor;
+}
+.el-select-dropdown__item.selected {
+  color: $mainBtnColor;
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  color:$mainBtnColor;
+  background-color: #FFF;
+}
+.el-dropdown-menu__item{
+  color: $mainBtnColor;
+}
+.el-dropdown-menu__item:focus,.el-dropdown-menu__item.is-focus{
+  color: $mainBtnColor;
+  // background-color: #ff6724;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+  border-color: $mainBtnColor;
+  background: $mainBtnColor;
+}
+.el-radio__input.is-checked+.el-radio__label {
+  color:  $mainBtnColor;
+}
+.el-radio__inner:hover {
+  border: 1px solid  $mainBtnColor;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color:$mainBtnColor;
+  border-color: $mainBtnColor;
+}
+.el-checkbox__inner:hover,.el-checkbox__inner.is-focus,.el-checkbox__input.is-focus{
+  border-color: $mainBtnColor;
+}
+
+.cell{
+  .el-button+.el-button{
+    padding-left: 10px;
+    border-left: 1px solid #D8D8D8; 
+  }
+}
+.el-checkbox__input.is-checked+.el-checkbox__label {
+  color: $mainBtnColor;
+}
+.el-range-editor.is-active, .el-range-editor.is-active:hover {
+  border-color: $mainBtnColor;
+}
+.el-date-table td.today span,.el-date-table td.available:hover {
+  color:$mainBtnColor;
+}
+
+.el-cascader .el-input .el-input__inner:focus, .el-cascader .el-input.is-focus .el-input__inner {
+  border-color:$mainBtnColor;
+}
+.el-cascader-node.in-active-path, .el-cascader-node.is-active, .el-cascader-node.is-selectable.in-checked-path {
+  color:$mainBtnColor;
+}
+.el-date-table td.current:not(.disabled) span {
+  background-color: $mainBtnColor;
+}
+.el-pagination .el-select .el-input .el-input__inner:hover{
+  border:1px solid $mainBtnColor;
+}
+
+.el-date-table td.end-date span, .el-date-table td.start-date span{
+  background-color: $mainBtnColor;
+}

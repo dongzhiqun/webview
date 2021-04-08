@@ -1,0 +1,18 @@
+$mainBtnColor: #64a998;
+$mainBtnOnColor: #7fcab7;
+$sideBg: #d9e2df;
+$mainBg: #f5f5f5;
+
+// Override Element UI variables
+$--color-primary: $mainBtnColor !default;
+$--color-success: #67c23a !default;
+$--color-warning: #e6a23c !default;
+$--color-danger: #f56c6c !default;
+$--color-info: #909399 !default;
+
+:export {
+  mainBtnColor: $mainBtnColor;
+  mainBtnOnColor: $mainBtnOnColor;
+  sideBg: $sideBg;
+  mainBg: $mainBg
+}
