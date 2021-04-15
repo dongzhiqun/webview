@@ -69,8 +69,8 @@ export default {
   font-size: 16px;
 }
 .headerFunc {
-  line-height: 50px;
-  height: 50px;
+  line-height: 35px;
+  height: 35px;
   box-sizing: border-box;
   padding: 0 20px;
   font-size: 20px;
