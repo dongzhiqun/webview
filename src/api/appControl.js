@@ -13,7 +13,7 @@ export function getAppList (params) {
 // 获取应用详情方法
 export function getAppDetail (params) {
   return service({
-    url: '/osg-ocp-user0001/usermanage/devusers',
+    url: '/api/usermanage/devusers',
     method: 'get',
     params
   })
@@ -22,7 +22,7 @@ export function getAppDetail (params) {
 // 获取应用订阅列表方法
 export function getAppSubscribeList (params) {
   return service({
-    url: '/osg-ocp-user0001/accSubInfo/getAppSubscribeDetails',
+    url: '/api/accSubInfo/getAppSubscribeDetails',
     method: 'get',
     params
   })
@@ -31,7 +31,7 @@ export function getAppSubscribeList (params) {
 // 获取应用订阅统计方法
 export function getAppSubscribeCount (params) {
   return service({
-    url: '/osg-ocp-user0001/accSubInfo/getAppSubscribeDetailsCount',
+    url: '/api/accSubInfo/getAppSubscribeDetailsCount',
     method: 'get',
     params
   })
@@ -49,7 +49,7 @@ export function updateAppStatus (params) {
 // 获取能力详情方法
 export function getCapInfo (params, capCode) {
   return service({
-    url: '/osg-ocp-user0001/capacities/getCapacityByCapCode/' + capCode,
+    url: '/api/capacities/getCapacityByCapCode/' + capCode,
     method: 'get',
     params
   })
@@ -58,7 +58,7 @@ export function getCapInfo (params, capCode) {
 // 获取应用分类方法
 export function getAppType (params) {
   return service({
-    url: '/osg-ocp-user0001/appType/findAllListAppType',
+    url: '/api/appType/findAllListAppType',
     method: 'get',
     params
   })
@@ -66,14 +66,14 @@ export function getAppType (params) {
 
 export function findAllListAppType () {
   return service({
-    url: '/osg-ocp-user0001/appType/findAllListAppType',
+    url: '/api/appType/findAllListAppType',
     method: 'get'
   })
 }
 
 export function findListAppType (params) {
   return service({
-    url: '/osg-ocp-user0001/appType/findListAppType',
+    url: '/api/appType/findListAppType',
     method: 'get',
     params
   })
@@ -81,7 +81,7 @@ export function findListAppType (params) {
 
 export function insertAppType (params) {
   return service({
-    url: '/osg-ocp-user0001/appType/insertAppType',
+    url: '/api/appType/insertAppType',
     method: 'post',
     params
   })
@@ -89,7 +89,7 @@ export function insertAppType (params) {
 
 export function updateAppTypeById (params) {
   return service({
-    url: '/osg-ocp-user0001/appType/updateAppTypeById',
+    url: '/api/appType/updateAppTypeById',
     method: 'post',
     params
   })
@@ -97,7 +97,7 @@ export function updateAppTypeById (params) {
 
 export function deleteAppTypeById (params) {
   return service({
-    url: `/osg-ocp-user0001/appType/deleteAppTypeById/${params.id}/${params.appTypeCode}`,
+    url: `/api/appType/deleteAppTypeById/${params.id}/${params.appTypeCode}`,
     method: 'delete'
   })
 }

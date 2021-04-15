@@ -280,7 +280,7 @@ export default {
     },
     // 跳转认证页面
     goAuth () {
-      this.$router.push('/personCenter/realeName')
+      this.$router.push('/personCenter/realName')
     },
     // 跳转安全设置页面
     goSetSafe () {

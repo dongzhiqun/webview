@@ -3,7 +3,7 @@ import service from '@/utils/request'
 // 获取操作员列表方法
 export function getUserList (params) {
   return service({
-    url: '/osg-ocp-user0001/users',
+    url: '/api-user0001/users',
     method: 'get',
     params
   })
@@ -12,7 +12,7 @@ export function getUserList (params) {
 // 修改操作员状态方法
 export function updateUserState (params) {
   return service({
-    url: '/osg-ocp-user0001/users/updateEnabled',
+    url: '/api-user0001/users/updateEnabled',
     method: 'get',
     params
   })
@@ -21,7 +21,7 @@ export function updateUserState (params) {
 // 获取角色列表方法
 export function getRoleList (params) {
   return service({
-    url: '/osg-ocp-user0001/roles',
+    url: '/api-user0001/roles',
     method: 'get',
     params
   })
@@ -30,7 +30,7 @@ export function getRoleList (params) {
 // 获取菜单列表方法
 export function getMenuList (params) {
   return service({
-    url: '/osg-ocp-user0001/menus/findAlls',
+    url: '/api-user0001/menus/findAlls',
     method: 'get',
     params
   })
@@ -38,7 +38,7 @@ export function getMenuList (params) {
 // 修改菜单信息方法
 export function saveOrUpdateMenu (params) {
   return service({
-    url: '/osg-ocp-user0001/menus/saveOrUpdate',
+    url: '/api-user0001/menus/saveOrUpdate',
     method: 'post',
     params
   })
@@ -46,7 +46,7 @@ export function saveOrUpdateMenu (params) {
 // 删除菜单信息方法
 export function deleteMenu (id) {
   return service({
-    url: '/osg-ocp-user0001/menus/' + id,
+    url: '/api-user0001/menus/' + id,
     method: 'delete'
   })
 }
@@ -54,7 +54,7 @@ export function deleteMenu (id) {
 // 修改权限方法方法
 export function updatePermission (params) {
   return service({
-    url: '/osg-ocp-user0001/permissions/granted',
+    url: '/api-user0001/permissions/granted',
     method: 'post',
     params
   })
@@ -63,7 +63,7 @@ export function updatePermission (params) {
 // 获取权限列表方法
 export function getPermissionList (params) {
   return service({
-    url: '/osg-ocp-user0001/permissions',
+    url: '/api-user0001/permissions',
     method: 'get',
     params
   })
@@ -72,7 +72,7 @@ export function getPermissionList (params) {
 // 获取数据字典列表方法
 export function getDictionaryList (params) {
   return service({
-    url: '/osg-ocp-user0001/dictionary/findList',
+    url: '/api-user0001/dictionary/findList',
     method: 'get',
     params
   })
@@ -81,7 +81,7 @@ export function getDictionaryList (params) {
 // 重置用户密码方法
 export function resetUserPassword (params, id) {
   return service({
-    url: '/osg-ocp-user0001/users/' + id + '/resetPassword',
+    url: '/api-user0001/users/' + id + '/resetPassword',
     method: 'post',
     params
   })
@@ -90,7 +90,7 @@ export function resetUserPassword (params, id) {
 // 当前角色对应的菜单列表方法
 export function getRoleMenu (params, id) {
   return service({
-    url: '/osg-ocp-user0001/menus/' + id + '/menus',
+    url: '/api-user0001/menus/' + id + '/menus',
     method: 'get',
     params
   })
@@ -99,7 +99,7 @@ export function getRoleMenu (params, id) {
 // 保存修改角色方法
 export function roleSaveOrUpdate (params) {
   return service({
-    url: '/osg-ocp-user0001/roles/saveOrUpdate',
+    url: '/api-user0001/roles/saveOrUpdate',
     method: 'post',
     params
   })
@@ -108,7 +108,7 @@ export function roleSaveOrUpdate (params) {
 // 删除角色方法
 export function deleteRole (id) {
   return service({
-    url: '/osg-ocp-user0001/roles/' + id,
+    url: '/api-user0001/roles/' + id,
     method: 'delete'
   })
 }
@@ -116,7 +116,7 @@ export function deleteRole (id) {
 // 修改角色菜单方法
 export function updateRoleMenu (params) {
   return service({
-    url: '/osg-ocp-user0001/menus/granted',
+    url: '/api-user0001/menus/granted',
     method: 'post',
     params
   })
@@ -125,7 +125,7 @@ export function updateRoleMenu (params) {
 // 新增修改权限方法,权限管理用的
 export function updatePermissionInfo (params) {
   return service({
-    url: '/osg-ocp-user0001/permissions/saveOrUpdate',
+    url: '/api-user0001/permissions/saveOrUpdate',
     method: 'post',
     params
   })
@@ -134,7 +134,7 @@ export function updatePermissionInfo (params) {
 // 获取决策权限菜单方法
 export function getRolePermissionArr (params, id) {
   return service({
-    url: '/osg-ocp-user0001/permissions/' + id + '/permissions',
+    url: '/api-user0001/permissions/' + id + '/permissions',
     method: 'get',
     params
   })
@@ -143,7 +143,7 @@ export function getRolePermissionArr (params, id) {
 // 删除权限方法方法，权限列表里面的
 export function deletePermission (params, id) {
   return service({
-    url: '/osg-ocp-user0001/permissions/' + id,
+    url: '/api-user0001/permissions/' + id,
     method: 'delete',
     params
   })
@@ -152,7 +152,7 @@ export function deletePermission (params, id) {
 // 删除字典
 export function deleteDict (id) {
   return service({
-    url: '/osg-ocp-user0001/dictionary/deleteDict/' + id,
+    url: '/api-user0001/dictionary/deleteDict/' + id,
     method: 'delete'
   })
 }
@@ -160,7 +160,7 @@ export function deleteDict (id) {
 // 添加保存字典方法
 export function saveDict (params) {
   return service({
-    url: '/osg-ocp-user0001/dictionary/saveDict',
+    url: '/api-user0001/dictionary/saveDict',
     method: 'post',
     params
   })
@@ -169,7 +169,7 @@ export function saveDict (params) {
 // 修改保存字典方法
 export function updateDict (params) {
   return service({
-    url: '/osg-ocp-user0001/dictionary/updateDict',
+    url: '/api-user0001/dictionary/updateDict',
     method: 'post',
     params
   })
@@ -178,7 +178,7 @@ export function updateDict (params) {
 // 修改操作员信息方法
 export function updateUser (params) {
   return service({
-    url: '/osg-ocp-user0001/users/saveOrUpdate',
+    url: '/api-user0001/users/saveOrUpdate',
     method: 'post',
     params
   })

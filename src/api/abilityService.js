@@ -3,7 +3,7 @@ import service from '@/utils/request'
 // 能力目录查询
 export function getCapCatalogList (params) {
   return service({
-    url: '/osg-ocp-user0001/catalog/findAllListCapCatalog',
+    url: '/api/catalog/findAllListCapCatalog',
     method: 'get',
     params
   })
@@ -12,7 +12,7 @@ export function getCapCatalogList (params) {
 // 能力列表查询
 export function getCapList (params, query) {
   return service({
-    url: '/osg-ocp-user0001/capacities' + query,
+    url: '/api/capacities' + query,
     method: 'get',
     params
   })
@@ -21,7 +21,7 @@ export function getCapList (params, query) {
 // 能力详情查询
 export function getCapDetail (params, id) {
   return service({
-    url: '/osg-ocp-user0001/capacities/' + id,
+    url: '/api/capacities/' + id,
     method: 'get',
     params
   })
@@ -39,7 +39,7 @@ export function getCapAuditDetail (params, capCode) {
 // 能力列表数据操作（发布）
 export function publishCap (params, abilityId) {
   return service({
-    url: '/osg-ocp-user0001/capacities/' + abilityId + '/publish',
+    url: '/api/capacities/' + abilityId + '/publish',
     method: 'patch',
     params
   })
@@ -48,7 +48,7 @@ export function publishCap (params, abilityId) {
 // 能力列表数据操作（撤回）
 export function recallCap (params, id) {
   return service({
-    url: '/osg-ocp-user0001/capacities/' + id + '/withdraw',
+    url: '/api/capacities/' + id + '/withdraw',
     method: 'patch',
     params
   })
@@ -57,7 +57,7 @@ export function recallCap (params, id) {
 // 能力列表数据操作（是否可用）
 export function availableFlagCap (params, value) {
   return service({
-    url: '/osg-ocp-user0001/capacities/' + value + '/availability',
+    url: '/api/capacities/' + value + '/availability',
     method: 'patch',
     params
   })
@@ -66,7 +66,7 @@ export function availableFlagCap (params, value) {
 // 能力审核通过、驳回
 export function auditCap (params, capCode) {
   return service({
-    url: '/osg-ocp-user0001/capacities/' + capCode + '/cap-audit-records',
+    url: '/api/capacities/' + capCode + '/cap-audit-records',
     method: 'post',
     params
   })
@@ -75,7 +75,7 @@ export function auditCap (params, capCode) {
 // 能力创建（保存、提交）
 export function updateCap (params, selectedCapId) {
   return service({
-    url: '/osg-ocp-user0001/capacities/' + selectedCapId,
+    url: '/api/capacities/' + selectedCapId,
     method: selectedCapId.length > 0 ? 'put' : 'post',
     params
   })
@@ -85,13 +85,13 @@ export function updateCap (params, selectedCapId) {
 export function colSubmitOrDelCap (params, btnName, id) {
   if (btnName === '提交') {
     return service({
-      url: '/osg-ocp-user0001/capacities/' + id + '/submit',
+      url: '/api/capacities/' + id + '/submit',
       method: 'patch',
       params
     })
   } else {
     return service({
-      url: '/osg-ocp-user0001/capacities/' + id,
+      url: '/api/capacities/' + id,
       method: 'delete',
       params
     })
@@ -100,7 +100,7 @@ export function colSubmitOrDelCap (params, btnName, id) {
 
 export function findListCapCatalog (params) {
   return service({
-    url: '/osg-ocp-user0001/catalog/findListCapCatalog',
+    url: '/api/catalog/findListCapCatalog',
     method: 'get',
     params
   })
@@ -108,7 +108,7 @@ export function findListCapCatalog (params) {
 
 export function insertCatalog (params) {
   return service({
-    url: '/osg-ocp-user0001/catalog/insertCatalog',
+    url: '/api/catalog/insertCatalog',
     method: 'post',
     params
   })
@@ -116,7 +116,7 @@ export function insertCatalog (params) {
 
 export function updateCatalogById (params) {
   return service({
-    url: '/osg-ocp-user0001/catalog/updateCatalogById',
+    url: '/api/catalog/updateCatalogById',
     method: 'post',
     params
   })
@@ -124,7 +124,7 @@ export function updateCatalogById (params) {
 
 export function deleteCatalogById (params) {
   return service({
-    url: `/osg-ocp-user0001/catalog/deleteCatalogById/${params.id}/${params.capCatalogCode}`,
+    url: `/api/catalog/deleteCatalogById/${params.id}/${params.capCatalogCode}`,
     method: 'delete'
   })
 }

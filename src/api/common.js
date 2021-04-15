@@ -4,7 +4,7 @@ import service from '@/utils/request'
 // 数据字典接口
 export function getSubDict (params) {
   return service({
-    url: '/osg-ocp-developer0001/dictionary/getSubDictList',
+    url: '/api-developer0001/dictionary/getSubDictList',
     method: 'post',
     params: params
   })

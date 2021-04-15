@@ -22,21 +22,20 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    show: false,
+    name: '统计',
     component: Layout,
     redirect: '/index',
     meta: {
-      title: '首页', icon: ''
+      title: '统计', icon: ''
     },
     children: [
       {
         path: 'index',
-        name: '首页',
+        name: '概览详情',
         meta: {
-          title: '首页', icon: ''
+          title: '概览', icon: ''
         },
-        component: () => import('@/views/viewModel/viewModel.vue')
+        component: () => import('@/views/Home/index.vue')
       }
     ]
   },
@@ -64,6 +63,54 @@ const routes = [
           title: 'form表单', icon: ''
         },
         component: () => import('@/views/Form/index.vue')
+      }
+    ]
+  },
+  {
+    path: '/personCenter',
+    show: true,
+    meta: { title: '个人中心', icon: '' },
+    component: Layout,
+    redirect: '/personCenter/userInfo',
+    children: [
+      {
+        path: 'userInfo',
+        name: '用户信息',
+        meta: { title: '用户信息', icon: '' },
+        component: () => import('@/views/PersonCenter/userInfo.vue')
+      },
+      {
+        path: 'realName',
+        name: '实名认证',
+        meta: { title: '实名认证', icon: '' },
+        component: () => import('@/views/PersonCenter/realName.vue')
+      },
+      {
+        path: 'secSetting',
+        name: '安全设置',
+        meta: { title: '安全设置', icon: '' },
+        component: () => import('@/views/PersonCenter/secSetting.vue')
+      },
+      {
+        path: 'secSetingPass',
+        name: '修改密码',
+        show: false,
+        meta: { title: '修改密码', icon: '' },
+        component: () => import('@/views/PersonCenter/secSetingPass.vue')
+      },
+      {
+        path: 'secSetingPass',
+        name: '修改密码',
+        show: false,
+        meta: { title: '修改密码', icon: '' },
+        component: () => import('@/views/PersonCenter/secSetingPass.vue')
+      },
+      {
+        path: 'secSetingPhone',
+        name: '修改手机号',
+        show: false,
+        meta: { title: '修改手机号', icon: '' },
+        component: () => import('@/views/PersonCenter/secSetingPhone.vue')
       }
     ]
   },

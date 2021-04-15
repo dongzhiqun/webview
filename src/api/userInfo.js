@@ -4,7 +4,7 @@ import service from '@/utils/request'
 // 获取用户资料
 export function getUserName (params) {
   return service({
-    url: '/osg-ocp-developer0001/enterpriseinfo/getBaseInfo',
+    url: '/api-developer0001/enterpriseinfo/getBaseInfo',
     method: 'post',
     params
   })
@@ -13,7 +13,7 @@ export function getUserName (params) {
 // 获取审核状态
 export function getAuditInfo (params) {
   return service({
-    url: '/osg-ocp-developer0001/enterpriseinfo/getAuditInfo',
+    url: '/api-developer0001/enterpriseinfo/getAuditInfo',
     method: 'post',
     params
   })
@@ -22,7 +22,7 @@ export function getAuditInfo (params) {
 // 基本信息编辑回显
 export function baseInfoDetail (params) {
   return service({
-    url: '/osg-ocp-developer0001/enterpriseinfo/baseInfoDetail',
+    url: '/api-developer0001/enterpriseinfo/baseInfoDetail',
     method: 'post',
     params
   })
@@ -31,7 +31,7 @@ export function baseInfoDetail (params) {
 // 获取省份
 export function getProvice (params) {
   return service({
-    url: '/osg-ocp-developer0001/addressInfo/firstLevel',
+    url: '/api-developer0001/addressInfo/firstLevel',
     method: 'post',
     params
   })
@@ -40,7 +40,7 @@ export function getProvice (params) {
 // 获取市 区
 export function getCity (params) {
   return service({
-    url: '/osg-ocp-developer0001/addressInfo/childList',
+    url: '/api-developer0001/addressInfo/childList',
     method: 'post',
     params
   })
@@ -49,7 +49,7 @@ export function getCity (params) {
 // 保存修改信息
 export function saveEditInfo (params) {
   return service({
-    url: '/osg-ocp-developer0001/enterpriseinfo/saveBaseInfo',
+    url: '/api-developer0001/enterpriseinfo/saveBaseInfo',
     method: 'post',
     params
   })
@@ -58,7 +58,7 @@ export function saveEditInfo (params) {
 // 获取之前审核信息
 export function getRealNameDetil (params) {
   return service({
-    url: '/osg-ocp-developer0001/enterpriseinfo/authDetail',
+    url: '/api-developer0001/enterpriseinfo/authDetail',
     method: 'post',
     params
   })
@@ -67,7 +67,7 @@ export function getRealNameDetil (params) {
 // 审核接口
 export function saveRealName (params) {
   return service({
-    url: '/osg-ocp-developer0001/enterpriseinfo/saveAuthInfo',
+    url: '/api-developer0001/enterpriseinfo/saveAuthInfo',
     method: 'post',
     params
   })
@@ -77,9 +77,9 @@ export function saveRealName (params) {
 export function valdatePass (params) {
   let url = ''
   if (params.type === '20') {
-    url = '/osg-ocp-developer0001/updatePhoneFirstSetp'
+    url = '/api-developer0001/updatePhoneFirstSetp'
   } else {
-    url = '/osg-ocp-developer0001/updatePasswordFirstSetp'
+    url = '/api-developer0001/updatePasswordFirstSetp'
   }
   return service({
     url: url,
@@ -91,7 +91,7 @@ export function valdatePass (params) {
 // 修改新密码接口
 export function saveNewPass (params) {
   return service({
-    url: '/osg-ocp-developer0001/updatePasswordSecSetp',
+    url: '/api-developer0001/updatePasswordSecSetp',
     method: 'post',
     params
   })
@@ -100,7 +100,7 @@ export function saveNewPass (params) {
 // 修改手机号接口
 export function saveNewPhone (params) {
   return service({
-    url: '/osg-ocp-developer0001/updatePhoneSecSetp',
+    url: '/api-developer0001/updatePhoneSecSetp',
     method: 'post',
     params
   })
@@ -109,7 +109,7 @@ export function saveNewPhone (params) {
 // 图片下载
 export function downloadFile (params) {
   return service({
-    url: '/osg-ocp-developer0001/commonFile/downloadFile',
+    url: '/api-developer0001/commonFile/downloadFile',
     method: 'get',
     // responseType: 'arraybuffer',
     params
@@ -119,7 +119,7 @@ export function downloadFile (params) {
 // 头像保存接口
 export function saveHeaderFile (params) {
   return service({
-    url: '/osg-ocp-developer0001/enterpriseinfo/saveHeadImgUrl',
+    url: '/api-developer0001/enterpriseinfo/saveHeadImgUrl',
     method: 'post',
     params
   })

@@ -31,7 +31,7 @@
 <script>
 import sendCode from '@/components/sendCode/sendCode.vue'
 import { getTokenCode } from '@/api/user.js'
-import { valdatePass, getUserName } from '@/api/userInfo.js'
+import { valdatePass } from '@/api/userInfo.js'
 export default {
   name: 'edit-code',
   components: { sendCode },
@@ -78,12 +78,12 @@ export default {
     }
   },
   mounted () {
-    getUserName().then((res) => {
-      this.codeForm.phone = res.data.phone
-      this.$emit('new-user', res.data.userName)
-    }).catch(() => {
+    // getUserName().then((res) => {
+    //   this.codeForm.phone = res.data.phone
+    //   this.$emit('new-user', res.data.userName)
+    // }).catch(() => {
 
-    })
+    // })
   },
   methods: {
     // 倒计时

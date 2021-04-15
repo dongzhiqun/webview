@@ -4,7 +4,7 @@ import qs from 'qs'
 // 登录接口
 export function login (params) {
   return service({
-    url: '/osg-ocp-developer0001/oauth/token',
+    url: '/api-developer0001/oauth/token',
     method: 'post',
     params: qs.stringify(params)
   })
@@ -21,7 +21,7 @@ export function logout (params) {
 // 获取用户信息接口
 export function getUserInfo (params) {
   return service({
-    url: '/osg-ocp-developer0001/userinfo',
+    url: '/api-developer0001/userinfo',
     method: 'get',
     params
   })
@@ -30,7 +30,7 @@ export function getUserInfo (params) {
 // 获取用户路由接口
 export function getUserMenu (params) {
   return service({
-    url: '/osg-ocp-developer0001/menus/current',
+    url: '/api-developer0001/menus/current',
     method: 'get',
     params
   })
@@ -39,7 +39,7 @@ export function getUserMenu (params) {
 // 获取短信验证码接口
 export function getCode (params) {
   return service({
-    url: '/osg-ocp-developer0001/getVerificationCode',
+    url: '/api-developer0001/getVerificationCode',
     method: 'post',
     params
   })
@@ -48,7 +48,7 @@ export function getCode (params) {
 // 有token 获取短信验证码
 export function getTokenCode (params) {
   return service({
-    url: '/osg-ocp-developer0001/getOtherVerificationCode',
+    url: '/api-developer0001/getOtherVerificationCode',
     method: 'post',
     params
   })
@@ -57,7 +57,7 @@ export function getTokenCode (params) {
 // 注册接口
 export function regUser (params) {
   return service({
-    url: '/osg-ocp-developer0001/devUserRegistered',
+    url: '/api-developer0001/devUserRegistered',
     method: 'post',
     params
   })
@@ -66,7 +66,7 @@ export function regUser (params) {
 // 忘记密码，填写用户确定按钮
 export function validateUser (params) {
   return service({
-    url: '/osg-ocp-developer0001/findPasswordFirstSetp',
+    url: '/api-developer0001/findPasswordFirstSetp',
     method: 'post',
     params
   })
@@ -75,7 +75,7 @@ export function validateUser (params) {
 // 忘记密码，验证用户确定按钮
 export function validateUserPhone (params) {
   return service({
-    url: '/osg-ocp-developer0001/findPasswordSecSetp',
+    url: '/api-developer0001/findPasswordSecSetp',
     method: 'post',
     params
   })
@@ -84,7 +84,7 @@ export function validateUserPhone (params) {
 // 忘记密码，修改密码确定按钮
 export function resertPass (params) {
   return service({
-    url: '/osg-ocp-developer0001/findPasswordThirdSetp',
+    url: '/api-developer0001/findPasswordThirdSetp',
     method: 'post',
     params
   })

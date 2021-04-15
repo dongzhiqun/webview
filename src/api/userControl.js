@@ -3,7 +3,7 @@ import service from '@/utils/request'
 // 获取实名认证审核列表方法
 export function getrealNameUserList (params) {
   return service({
-    url: '/osg-ocp-user0001/personAuthHandle/getEnterpriseAuthList',
+    url: '/api-user0001/personAuthHandle/getEnterpriseAuthList',
     method: 'get',
     params
   })
@@ -12,7 +12,7 @@ export function getrealNameUserList (params) {
 // 获取用户列表方法
 export function getUserList (params) {
   return service({
-    url: '/osg-ocp-user0001/usermanage/devusers',
+    url: '/api-user0001/usermanage/devusers',
     method: 'get',
     params
   })
@@ -21,7 +21,7 @@ export function getUserList (params) {
 // 获取用户详情方法
 export function getUserDetail (params, id) {
   return service({
-    url: '/osg-ocp-user0001/usermanage/findUserDetailsById/' + id,
+    url: '/api-user0001/usermanage/findUserDetailsById/' + id,
     method: 'get',
     params
   })
@@ -30,7 +30,7 @@ export function getUserDetail (params, id) {
 // 获取实名认证详情方法
 export function getrealNameDetail (params, id) {
   return service({
-    url: '/osg-ocp-user0001/personAuthHandle/getEnterpriseAuthInfoById/' + id,
+    url: '/api-user0001/personAuthHandle/getEnterpriseAuthInfoById/' + id,
     method: 'get',
     params
   })
@@ -39,7 +39,7 @@ export function getrealNameDetail (params, id) {
 // 获取实名认证详情审核列表方法
 export function getrealNameDetailCheckArr (params, id) {
   return service({
-    url: '/osg-ocp-user0001/personAuthHandle/getEnterAuditRecordById/' + id,
+    url: '/api-user0001/personAuthHandle/getEnterAuditRecordById/' + id,
     method: 'get',
     params
   })
@@ -48,7 +48,7 @@ export function getrealNameDetailCheckArr (params, id) {
 // 获取用户详情审核列表方法
 export function getUserDetailCheckArr (params, id) {
   return service({
-    url: '/osg-ocp-user0001/personAuthHandle/getEnterAuditRecordById/' + id,
+    url: '/api-user0001/personAuthHandle/getEnterAuditRecordById/' + id,
     method: 'get',
     params
   })
@@ -57,7 +57,7 @@ export function getUserDetailCheckArr (params, id) {
 // 审核提交方法方法
 export function updataCheckStatus (params) {
   return service({
-    url: '/osg-ocp-user0001/personAuthHandle/enterPriseAuditPassOrReject',
+    url: '/api-user0001/personAuthHandle/enterPriseAuditPassOrReject',
     method: 'post',
     params
   })
@@ -66,7 +66,7 @@ export function updataCheckStatus (params) {
 // 更新密码方法
 export function updataPassword (params) {
   return service({
-    url: '/osg-ocp-user0001/usermanage/updatePassword',
+    url: '/api-user0001/usermanage/updatePassword',
     method: 'post',
     params
   })
@@ -75,7 +75,7 @@ export function updataPassword (params) {
 // 锁定解锁用户方法
 export function lockUser (params) {
   return service({
-    url: '/osg-ocp-user0001/usermanage/lockOrUnlockUserState',
+    url: '/api-user0001/usermanage/lockOrUnlockUserState',
     method: 'post',
     params
   })
@@ -84,7 +84,7 @@ export function lockUser (params) {
 // 添加用户方法
 export function userUpdate (params) {
   return service({
-    url: '/osg-ocp-user0001/usermanage/saveOrUpdate',
+    url: '/api-user0001/usermanage/saveOrUpdate',
     method: 'post',
     params
   })

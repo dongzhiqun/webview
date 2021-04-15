@@ -76,7 +76,7 @@ export default {
     },
     $route: {
       handler: function (val, oldVal) {
-        console.log(val)
+        // console.log(val)
       },
       // 深度观察监听
       deep: true

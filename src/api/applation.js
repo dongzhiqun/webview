@@ -4,7 +4,7 @@ import applation from '@/store'
 // 获取已创建应用列表 sand
 export function getApplationList (params) {
   return service({
-    url: applation.getters.sandBoxState === '1' ? '/osg-ocp-developer0001/sandbox/clients/dev-user-client/list' : '/osg-ocp-developer0001/clients/dev-user-client/list',
+    url: applation.getters.sandBoxState === '1' ? '/api-developer0001/sandbox/clients/dev-user-client/list' : '/api-developer0001/clients/dev-user-client/list',
     method: 'post',
     params
   })
@@ -13,7 +13,7 @@ export function getApplationList (params) {
 // 获取新密钥 sand
 export function getNewSecret (params) {
   return service({
-    url: applation.getters.sandBoxState === '1' ? '/osg-ocp-developer0001/sandbox/clients/getNewSecret/' + params : '/osg-ocp-developer0001/clients/getNewSecret/' + params,
+    url: applation.getters.sandBoxState === '1' ? '/api-developer0001/sandbox/clients/getNewSecret/' + params : '/api-developer0001/clients/getNewSecret/' + params,
     method: 'get'
     // params
   })
@@ -22,7 +22,7 @@ export function getNewSecret (params) {
 // 更新密钥密钥 sand
 export function configNewSecret (params) {
   return service({
-    url: applation.getters.sandBoxState === '1' ? '/osg-ocp-developer0001/sandbox/clients/updateSecret/' + params : '/osg-ocp-developer0001/clients/updateSecret/' + params,
+    url: applation.getters.sandBoxState === '1' ? '/api-developer0001/sandbox/clients/updateSecret/' + params : '/api-developer0001/clients/updateSecret/' + params,
     method: 'get'
     // params
   })
@@ -31,7 +31,7 @@ export function configNewSecret (params) {
 // 获取分类树
 export function getTreeCate (params) {
   return service({
-    url: '/osg-ocp-developer0001/apptypes/findApptypeAlls',
+    url: '/api-developer0001/apptypes/findApptypeAlls',
     method: 'get'
     // params
   })
@@ -40,7 +40,7 @@ export function getTreeCate (params) {
 // 保存应用接口 sand
 export function saveApplation (params) {
   return service({
-    url: applation.getters.sandBoxState === '1' ? '/osg-ocp-developer0001/sandbox/clients/saveOrUpdate' : '/osg-ocp-developer0001/clients/saveOrUpdate',
+    url: applation.getters.sandBoxState === '1' ? '/api-developer0001/sandbox/clients/saveOrUpdate' : '/api-developer0001/clients/saveOrUpdate',
     method: 'post',
     params
   })
