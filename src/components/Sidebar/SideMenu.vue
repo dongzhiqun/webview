@@ -7,7 +7,7 @@
       <template v-for="(item,index) in menuArr">
         <el-menu-item :key="index"
                       :index="index.toString()"
-                      v-if='item.children == undefined || item.children.length == 0'
+                      v-if='item.children === undefined || item.children.length === 0'
                       @click="handleChangePath(item.path,item,index)">
           <i :class="item.meta.icon"></i>
           <span slot="title">{{item.meta.title}}</span>
@@ -36,7 +36,7 @@
           <template v-for="(i,iindex) in item.children">
           <el-menu-item :index="index.toString()+'-'+iindex.toString()"
                         :key="iindex"
-                        v-if='i.show'
+                        v-if='i.show!==false'
                         @click="handleChangePath(item.path+'/'+i.path,i,index.toString()+'-'+iindex.toString())">{{i.meta.title}}</el-menu-item>
           </template>
         </el-submenu>
@@ -76,21 +76,7 @@ export default {
     },
     $route: {
       handler: function (val, oldVal) {
-        if (val.name === '实名认证') {
-          this.onOpenMenuIndex = '1-3'
-          setTimeout(() => {
-            this.$refs.menu.activeIndex = '1-3'
-          }, 301)
-        } else if (val.name === '应用列表') {
-          this.onOpenMenuIndex = '2-0'
-        } else if (val.name === '测试应用') {
-          this.onOpenMenuIndex = '3-1'
-        } else if (val.name === '安全设置') {
-          this.onOpenMenuIndex = '1-2'
-          setTimeout(() => {
-            this.$refs.menu.activeIndex = '1-2'
-          }, 301)
-        }
+        console.log(val)
       },
       // 深度观察监听
       deep: true
@@ -105,11 +91,6 @@ export default {
   },
   methods: {
     handleChangePath (path, item, index) {
-      if (path === '/sandBox/sandBox') {
-        this.$store.dispatch('getSandBox', '1')
-      } else {
-        this.$store.dispatch('getSandBox', '0')
-      }
       item.resetPath = path
       isNaN(index) ? item.index = index : item.index = index.toString()
       this.$store.commit('ADDMENUTAB', item)

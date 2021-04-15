@@ -2,7 +2,7 @@
   <div>
     <div class="logoBox">
         <img src="@/assets/JxtLogo.png" alt="">
-        <span>网上国网开放平台</span>
+        <span>XXXX</span>
     </div>
     <sideMenu />
     <div class="log-out" @click="logOut">

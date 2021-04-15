@@ -38,7 +38,7 @@ export default {
     }
   },
   mounted () {
-    this.nickName = JSON.parse(localStorage.getItem('userInfo')).nickname
+    // this.nickName = JSON.parse(localStorage.getItem('userInfo')).nickname
     // if (this.$store.getters.myPhoto) {
     //   downloadFile({ filename: this.$store.getters.myPhoto }).then((res) => {
     //     let str = res.replace(/\. +/g, '')
@@ -70,6 +70,7 @@ export default {
 }
 .headerFunc {
   line-height: 50px;
+  height: 50px;
   box-sizing: border-box;
   padding: 0 20px;
   font-size: 20px;
@@ -96,6 +97,5 @@ export default {
   height: 40px;
   line-height: 40px;
   overflow: hidden;
-  display: none;
 }
 </style>

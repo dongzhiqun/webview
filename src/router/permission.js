@@ -25,24 +25,15 @@ router.beforeEach((to, from, next) => {
   //         NProgress.done()
   //         next()
   //       } else {
-  if (newR.length === 0) {
-    store.dispatch('addRouter').then(res => {
-      newR = resetRouter(res)
-      router.addRoutes(newR)
-      router.options.routes = newR
-      next()
-    })
-  }
   //         NProgress.done()
   //       }
   //     } else {
   //       if (whitList.indexOf(to.path) > -1) {
   //         NProgress.done()
   //         next()
-  else {
     NProgress.done()
     next()
-  }
+  
   //     }
   //   })
   // } else {

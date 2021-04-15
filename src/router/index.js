@@ -25,7 +25,7 @@ const routes = [
     name: 'Home',
     show: false,
     component: Layout,
-    redirect: '/viewModel/viewModel',
+    redirect: '/index',
     meta: {
       title: '首页', icon: ''
     },
@@ -37,6 +37,33 @@ const routes = [
           title: '首页', icon: ''
         },
         component: () => import('@/views/viewModel/viewModel.vue')
+      }
+    ]
+  },
+  {
+    path: '/com',
+    meta: {
+      title: '组件', icon: ''
+    },
+    show: true,
+    component: Layout,
+    redirect: '/com/table',
+    children: [
+      {
+        path: 'table',
+        name: 'table表格',
+        meta: {
+          title: 'table表格', icon: ''
+        },
+        component: () => import('@/views/Table/index.vue')
+      },
+      {
+        path: 'form',
+        name: 'form表单',
+        meta: {
+          title: 'form表单', icon: ''
+        },
+        component: () => import('@/views/Form/index.vue')
       }
     ]
   },
