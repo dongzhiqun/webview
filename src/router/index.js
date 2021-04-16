@@ -26,14 +26,14 @@ const routes = [
     component: Layout,
     redirect: '/index',
     meta: {
-      title: '统计', icon: ''
+      title: '统计', icon: 'el-icon-s-tools'
     },
     children: [
       {
         path: 'index',
         name: '概览详情',
         meta: {
-          title: '概览', icon: ''
+          title: '概览', icon: 'el-icon-s-tools'
         },
         component: () => import('@/views/Home/index.vue')
       }
@@ -42,7 +42,7 @@ const routes = [
   {
     path: '/com',
     meta: {
-      title: '组件', icon: ''
+      title: '组件', icon: 'el-icon-s-tools'
     },
     show: true,
     component: Layout,
@@ -52,7 +52,7 @@ const routes = [
         path: 'table',
         name: 'table表格',
         meta: {
-          title: 'table表格', icon: ''
+          title: 'table表格', icon: 'el-icon-s-tools'
         },
         component: () => import('@/views/Table/index.vue')
       },
@@ -60,7 +60,7 @@ const routes = [
         path: 'form',
         name: 'form表单',
         meta: {
-          title: 'form表单', icon: ''
+          title: 'form表单', icon: 'el-icon-s-tools'
         },
         component: () => import('@/views/Form/index.vue')
       }
@@ -69,47 +69,40 @@ const routes = [
   {
     path: '/personCenter',
     show: true,
-    meta: { title: '个人中心', icon: '' },
+    meta: { title: '个人中心', icon: 'el-icon-s-tools' },
     component: Layout,
     redirect: '/personCenter/userInfo',
     children: [
       {
         path: 'userInfo',
         name: '用户信息',
-        meta: { title: '用户信息', icon: '' },
+        meta: { title: '用户信息', icon: 'el-icon-s-tools' },
         component: () => import('@/views/PersonCenter/userInfo.vue')
       },
       {
         path: 'realName',
         name: '实名认证',
-        meta: { title: '实名认证', icon: '' },
+        meta: { title: '实名认证', icon: 'el-icon-s-tools' },
         component: () => import('@/views/PersonCenter/realName.vue')
       },
       {
         path: 'secSetting',
         name: '安全设置',
-        meta: { title: '安全设置', icon: '' },
+        meta: { title: '安全设置', icon: 'el-icon-s-tools' },
         component: () => import('@/views/PersonCenter/secSetting.vue')
       },
       {
         path: 'secSetingPass',
         name: '修改密码',
         show: false,
-        meta: { title: '修改密码', icon: '' },
-        component: () => import('@/views/PersonCenter/secSetingPass.vue')
-      },
-      {
-        path: 'secSetingPass',
-        name: '修改密码',
-        show: false,
-        meta: { title: '修改密码', icon: '' },
+        meta: { title: '修改密码', icon: 'el-icon-s-tools' },
         component: () => import('@/views/PersonCenter/secSetingPass.vue')
       },
       {
         path: 'secSetingPhone',
         name: '修改手机号',
         show: false,
-        meta: { title: '修改手机号', icon: '' },
+        meta: { title: '修改手机号', icon: 'el-icon-s-tools' },
         component: () => import('@/views/PersonCenter/secSetingPhone.vue')
       }
     ]
