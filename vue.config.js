@@ -7,6 +7,7 @@ module.exports = {
     open: true,
     port: 8082
   },
+  lintOnSave:false,
   productionSourceMap: false,
   chainWebpack: config => {
     if (process.env.NODE_ENV === 'dev') {

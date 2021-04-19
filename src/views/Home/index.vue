@@ -5,6 +5,7 @@
     </div>
     <div class="view-model-stics">
       <el-row :gutter="20">
+
         <el-col :span="8">
           <div class="model-applation-num">
             <div>
@@ -149,7 +150,7 @@ export default {
   },
   methods: {
     init () {
-      this.getAllData()
+      this.getAllData();
     },
     getAllData () {
       // getViewModel(this.dataForm).then((res) => {
@@ -160,7 +161,7 @@ export default {
       // })
     },
     checkval () {
-      this.dataForm.startTime = this.calder01
+      this.dataForm.startTime=this.calder01
       this.getAllData()
     },
     checkvalT () {
