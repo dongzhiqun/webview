@@ -17,6 +17,7 @@ module.exports = {
   // Based on official configuration (internal plugin/config for the development of Vue itself).
   // By Evan You: https://github.com/vuejs/eslint-plugin-vue-libs/blob/master/config.js
   rules: {
+    'space-before-function-paren': 0,
     'accessor-pairs': 2,
     'arrow-spacing': [2, {
       'before': true,
@@ -41,7 +42,8 @@ module.exports = {
       'after': true
     }],
     'handle-callback-err': [2, '^(err|error)$'],
-    'indent': [2, 2, { 'SwitchCase': 1 }],
+    'indent': 'off',
+    // 'indent': [2, 2, { 'SwitchCase': 1 }],
     'jsx-quotes': [2, 'prefer-single'],
     'key-spacing': [2, {
       'beforeColon': false,

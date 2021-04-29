@@ -63,8 +63,35 @@ const routes = [
           title: 'form表单', icon: 'el-icon-s-tools'
         },
         component: () => import('@/views/Form/index.vue')
-      }
+      },
+      {
+        path: 'listBlog',
+        name: '网站信息列表',
+        meta: {
+          title: '网站信息', icon: 'el-icon-s-tools'
+        },
+        component: () => import('@/views/net/index.vue')
+      },
+         {
+            path: 'updateBlog/:id',
+            name: '网站信息修改',
+             show: false,
+            meta: {
+                title: '网站信息修改', icon: 'el-icon-s-tools'
+            },
+            component: () => import('@/views/net/updateBlog.vue')
+        },
+        {
+            path: '/addBlog',
+            name: '网站信息新增',
+            show: false,
+            meta: {
+                title: '网站信息新增', icon: 'el-icon-s-tools'
+            },
+            component: () => import('@/views/net/addBlog.vue')
+        }
     ]
+
   },
   {
     path: '/personCenter',

@@ -15,6 +15,9 @@ import NodataView from '@/components/widget/NodataView'
 import TreeView from '@/components/OcpTree'
 // 全局指令导入
 import '@/directives/click-control'
+import  VueResource  from 'vue-resource'
+
+Vue.use(VueResource)
 
 Vue.filter('emptyRes', function (value) {
   if (value === '' || value === null) {

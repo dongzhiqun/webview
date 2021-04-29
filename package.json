@@ -15,7 +15,7 @@
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "@types/parse-json": "^4.0.0",
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "echarts": "^4.9.0",
     "element-ui": "^2.14.1",
@@ -25,6 +25,7 @@
     "vue": "^2.6.11",
     "vue-context": "^6.0.0",
     "vue-quill-editor": "^3.0.6",
+    "vue-resource": "^1.5.2",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0",
     "vuex-persistedstate": "^4.0.0-beta.3"
@@ -45,7 +46,6 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "eslint-plugin-vue-libs": "^4.0.0",
-    "husky": "^4.3.7",
     "lint-staged": "^10.5.3",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
